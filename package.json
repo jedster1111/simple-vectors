@@ -2,7 +2,7 @@
   "name": "simple-vectors",
   "version": "1.0.2",
   "main": "build/index.js",
-  "module": "build/index.es.js",
+  "types": "build/index.d.ts",
   "repository": "https://github.com/jedster1111/simple-vectors.git",
   "author": "jedster1111 <jedster1111@hotmail.co.uk>",
   "license": "MIT",
@@ -28,7 +28,8 @@
     "typescript": "^3.5.2"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "test": "jest"
   },
   "jest": {
