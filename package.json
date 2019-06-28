@@ -1,6 +1,6 @@
 {
   "name": "simple-vectors",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "types": "build/index.d.ts",
@@ -8,7 +8,8 @@
   "author": "jedster1111 <jedster1111@hotmail.co.uk>",
   "license": "MIT",
   "files": [
-    "build"
+    "build",
+    "src"
   ],
   "devDependencies": {
     "@types/jest": "^24.0.15",
