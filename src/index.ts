@@ -1,3 +1,4 @@
 export function helloWorld(name: string): string {
-    return `${name} says "Hello World!"`;
+    const result = `${name} says "Hello World!"`;
+    return result;
 }
