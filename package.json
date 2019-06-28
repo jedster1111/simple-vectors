@@ -2,6 +2,7 @@
   "name": "simple-vectors",
   "version": "1.0.4",
   "main": "build/index.js",
+  "module": "build/index.esm.js",
   "types": "build/index.d.ts",
   "repository": "https://github.com/jedster1111/simple-vectors.git",
   "author": "jedster1111 <jedster1111@hotmail.co.uk>",
@@ -28,8 +29,10 @@
     "typescript": "^3.5.2"
   },
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "prepublishOnly": "yarn clean && yarn build",
+    "clean": "rm -rf build",
+    "build": "rollup -c",
+    "build:watch": "rollup -c --watch",
     "test": "jest"
   },
   "jest": {
