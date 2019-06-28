@@ -1,6 +1,6 @@
 {
   "name": "simple-vectors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "repository": "https://github.com/jedster1111/simple-vectors.git",
