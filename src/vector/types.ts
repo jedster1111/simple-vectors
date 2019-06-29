@@ -1,5 +1,4 @@
-export interface Vector {
-  readonly position: VectorPosition;
+export interface Vector extends VectorPosition {
   toString: () => string;
   add: (vectorToAdd: VectorPosition) => Vector;
   isEqual: (vectorToCompare: VectorPosition) => boolean;

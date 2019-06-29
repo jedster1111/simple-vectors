@@ -12,7 +12,8 @@ export function createVector(xOrKey: string | number, y?: number): Vector {
   const position: VectorPosition = getPosition(xOrKey, y);
 
   const result: Vector = {
-    position,
+    x: position.x,
+    y: position.y,
     toString: () => vectorToKey(position),
     add: function(vectorToAdd) {
       return addVectors(position, vectorToAdd);
