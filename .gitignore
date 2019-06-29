@@ -62,3 +62,4 @@ typings/
 
 build
 .rpt2_cache
+.DS_Store

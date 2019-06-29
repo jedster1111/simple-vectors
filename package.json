@@ -1,22 +1,27 @@
 {
   "name": "simple-vectors",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "main": "build/index.js",
+  "module": "build/index.esm.js",
   "types": "build/index.d.ts",
   "repository": "https://github.com/jedster1111/simple-vectors.git",
   "author": "jedster1111 <jedster1111@hotmail.co.uk>",
   "license": "MIT",
   "files": [
     "build",
+    "build-esm",
     "src"
   ],
+  "dependencies": {},
   "devDependencies": {
+    "@types/is-number": "^3.0.1",
     "@types/jest": "^24.0.15",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.4.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "rollup": "^1.16.2",
