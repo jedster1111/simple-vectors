@@ -2,7 +2,6 @@ export interface Vector extends VectorPosition {
   toString: () => string;
   add: (vectorToAdd: VectorPosition) => Vector;
   isEqual: (vectorToCompare: VectorPosition) => boolean;
-  isSmaller: (vectorToCompare: VectorPosition) => boolean;
   getArea: () => number;
 }
 

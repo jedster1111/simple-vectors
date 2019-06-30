@@ -12,7 +12,9 @@
     "build-esm",
     "src"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "is-number": "^7.0.0"
+  },
   "devDependencies": {
     "@types/is-number": "^3.0.1",
     "@types/jest": "^24.0.15",
@@ -38,7 +40,10 @@
     "clean": "rm -rf build",
     "build": "rollup -c",
     "build:watch": "rollup -c --watch",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "check-typescript": "tsc --noEmit"
   },
   "jest": {
     "preset": "ts-jest",
