@@ -29,7 +29,7 @@ function getPosition(xOrKey: string | number, y: number | undefined): VectorPosi
   if (typeof xOrKey === 'string' && y === undefined) {
     position = createPosition(xOrKey);
   } else if (isNumber(xOrKey) && isNumber(y)) {
-    position = createPosition(xOrKey, y);
+    position = createPosition(+xOrKey, y);
   } else {
     throw new Error(`
   Parameters don't meet type requirements.
