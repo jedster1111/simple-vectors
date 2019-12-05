@@ -8,7 +8,7 @@ export function createPosition(xOrKey: string | number, y?: number): VectorPosit
   let position: VectorPosition;
   if (typeof xOrKey === 'string') {
     position = keyToPosition(xOrKey);
-  } else if (isNumber(xOrKey) && isNumber(y)) {
+  } else if (isNumber(xOrKey) && y !== undefined && isNumber(y)) {
     position = { x: xOrKey, y };
   } else {
     throw new Error(`Both x and y must be provided. Received: ${xOrKey}, ${y}`);

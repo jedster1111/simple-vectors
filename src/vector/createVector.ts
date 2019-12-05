@@ -4,6 +4,7 @@ import { areVectorsEqual } from './areVectorsEqual';
 import { calculateVectorArea } from './calculateVectorArea';
 import { createPosition } from './createPosition';
 import { isVector } from './isVector';
+import { scaleVector } from './scaleVector';
 import { vectorToKey } from './vectorToKey';
 import isNumber from 'is-number';
 
@@ -18,6 +19,7 @@ export function createVector(keyOrPosOrX: string | VectorPosition | number, y?: 
     y: position.y,
     toString: () => vectorToKey(position),
     add: vectorToAdd => addVectors(position, vectorToAdd),
+    scale: scale => scaleVector(position, scale),
     isEqual: vectorToCompare => areVectorsEqual(position, vectorToCompare),
     getArea: () => calculateVectorArea(position),
   };
@@ -28,7 +30,7 @@ function getPosition(xOrKey: string | number, y: number | undefined): VectorPosi
   let position: VectorPosition;
   if (typeof xOrKey === 'string' && y === undefined) {
     position = createPosition(xOrKey);
-  } else if (isNumber(xOrKey) && isNumber(y)) {
+  } else if (isNumber(xOrKey) && y !== undefined && isNumber(y)) {
     position = createPosition(+xOrKey, y);
   } else {
     throw new Error(`

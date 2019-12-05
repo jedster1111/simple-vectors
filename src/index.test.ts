@@ -4,6 +4,7 @@ const exportsThatShouldExist = [
   'createVector',
   'createPosition',
   'addVectors',
+  'scaleVector',
   'areVectorsEqual',
   'calculateVectorArea',
   'vectorToKey',

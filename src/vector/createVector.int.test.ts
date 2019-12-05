@@ -39,6 +39,13 @@ describe('createVector', () => {
       });
     });
 
+    describe('scale', () => {
+      it('should scale the vector and return a new vector', () => {
+        const vector2 = vector.scale(5);
+        expect(vector2).toMatchObject({ x: 5, y: 10 });
+      });
+    });
+
     describe.each<[VectorPosition, boolean]>([[createVector(1, 2), true], [createVector(6, 6), false]])(
       'isEqual',
       (vectorToCompare, result) => {
